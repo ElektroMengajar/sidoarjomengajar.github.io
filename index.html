@@ -4,6 +4,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta charset="utf-8">
 <title>Elektro Mengajar</title>
+<link rel="shortcut icon" type="image/png" href="images/favicon.png">
 <meta name="robots" content="index, follow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -15,9 +16,7 @@
 <script src="util.min.js"></script>
 <script src="collapse.min.js"></script>
 <script src="dropdown.min.js"></script>
-<script src="wb.parallax.min.js"></script>
 <script src="carousel.min.js"></script>
-<script src="skrollr.min.js"></script>
 <script src="wwb16.min.js"></script>
 <script>
 $(document).ready(function()
@@ -28,7 +27,7 @@ $(document).ready(function()
    $('#wb_Image1').addClass('visibility-hidden');
    $('#wb_Image2').addClass('visibility-hidden');
    $('#wb_carouselGrid').addClass('visibility-hidden');
-   $('#wb_Text12').addClass('visibility-hidden');
+   $('#wb_Text19').addClass('visibility-hidden');
    $("a[href*='#header']").click(function(event)
    {
       event.preventDefault();
@@ -42,7 +41,6 @@ $(document).ready(function()
          $(this).collapse('hide');
       }
    });
-   $('#wb_LayoutGrid1').parallax();
    $("a[href*='#LayoutGrid4']").click(function(event)
    {
       event.preventDefault();
@@ -193,53 +191,29 @@ $(document).ready(function()
       onScrollcarouselGrid();
    });
    $("#Carousel1").bootstrapcarousel({interval:3000, pause: false});
-   function onScrollText12()
+   function onScrollText19()
    {
-      var $obj = $("#wb_Text12");
+      var $obj = $("#wb_Text19");
       if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
       {
          $obj.addClass("in-viewport");
-         AnimateCss('wb_Text12', 'jello-horizontal', 0, 1250);
+         AnimateCss('wb_Text19', 'animate-fade-in-right', 0, 1250);
       }
       else
       if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
       {
          $obj.removeClass("in-viewport");
-         AnimateCss('wb_Text12', 'animate-fade-out', 0, 0);
+         AnimateCss('wb_Text19', 'animate-fade-out', 0, 0);
       }
    }
-   if (!$('#wb_Text12').inViewPort(true))
+   if (!$('#wb_Text19').inViewPort(true))
    {
-      $('#wb_Text12').addClass("in-viewport");
+      $('#wb_Text19').addClass("in-viewport");
    }
-   onScrollText12();
+   onScrollText19();
    $(window).scroll(function(event)
    {
-      onScrollText12();
-   });
-   function skrollrInit()
-   {
-      skrollr.init({forceHeight: false, mobileCheck: function() { return false; }, smoothScrolling: false});
-   }
-   skrollrInit();
-   function onScrollsocial()
-   {
-      var $obj = $("#wb_social");
-      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
-      {
-         $obj.addClass("in-viewport");
-         AnimationResume('socialIcon3');
-      }
-   }
-   onScrollsocial();
-   $(window).scroll(function(event)
-   {
-      onScrollsocial();
-   });
-   $("a[href*='#links']").click(function(event)
-   {
-      event.preventDefault();
-      $('html, body').stop().animate({ scrollTop: $('#wb_links').offset().top-68 }, 600, 'easeOutCirc');
+      onScrollText19();
    });
 });
 </script>
@@ -250,11 +224,8 @@ $(document).ready(function()
 <div id="header">
 <div class="row">
 <div class="col-1">
-<div id="wb_Breadcrumb1" style="display:inline-block;width:100%;z-index:0;vertical-align:top;">
-<ul id="Breadcrumb1">
-<li><a href=""><i class="fa fa-home">&nbsp;</i></a></li>
-</ul>
-
+<div id="wb_Image6" style="display:inline-block;width:100%;height:auto;z-index:0;">
+<img src="images/logo.png" id="Image6" alt="">
 </div>
 </div>
 <div class="col-2">
@@ -280,7 +251,7 @@ $(document).ready(function()
 <a href="#LayoutGrid2" class="nav-link">Portfolio</a>
 </li>
 <li class="nav-item">
-<a href="#footer" class="nav-link">Contact Us</a>
+<a href="#LayoutGrid10" class="nav-link">Contact Us</a>
 </li>
 </ul>
 </div>
@@ -293,18 +264,17 @@ $(document).ready(function()
 </div>
 <div id="wb_LayoutGrid1">
 <div id="LayoutGrid1">
-<div class="row">
 <div class="col-1">
 <div id="wb_Text11">
 &nbsp;
 </div>
+<div id="wb_Image8" style="display:inline-block;width:326px;height:435px;z-index:3;">
+<img src="images/a6399d4468bf578dc8b3626242367d42 copy.png" id="Image8" alt="">
+</div>
 </div>
 <div class="col-2">
-<div id="wb_Text12" class="h1" data-top="transform:;" data-center-top="transform:;">
-<span style="color:#FFFFFF;font-family:BlackChancery;font-size:43px;">Elektro Mengajar Sidoarjo</span>
-</div>
-</div>
-<div class="col-3">
+<div id="wb_Text19">
+<span style="color:#FFFFFF;font-family:Verdana;font-size:48px;line-height:66px;">Selamat Datang<br>Di Website<br></span><span style="color:#FFFFFF;font-family:Verdana;font-size:37px;line-height:66px;">Elektro Mengajar Sidoarjo</span>
 </div>
 </div>
 </div>
@@ -314,7 +284,7 @@ $(document).ready(function()
 <div class="row">
 <div class="col-1">
 <div class="col-1-padding">
-<div id="wb_Card7" style="display:flex;width:100%;z-index:4;">
+<div id="wb_Card7" style="display:flex;width:100%;z-index:5;">
    <div id="Card7-card-body">
       <div id="Card7-card-item0"><i class="fa fa-user"></i></div>
       <div id="Card7-card-item1">About</div>
@@ -325,7 +295,7 @@ $(document).ready(function()
 </div>
 <div class="col-2">
 <div class="col-2-padding">
-<div id="wb_Card8" style="display:flex;width:100%;z-index:5;">
+<div id="wb_Card8" style="display:flex;width:100%;z-index:6;">
    <div id="Card8-card-body">
       <div id="Card8-card-item0"><i class="fa fa-check"></i></div>
       <div id="Card8-card-item1">Visi</div>
@@ -336,7 +306,7 @@ $(document).ready(function()
 </div>
 <div class="col-3">
 <div class="col-3-padding">
-<div id="wb_Card9" style="display:flex;width:100%;z-index:6;">
+<div id="wb_Card9" style="display:flex;width:100%;z-index:7;">
    <div id="Card9-card-body">
       <div id="Card9-card-item0"><i class="fa fa-puzzle-piece"></i></div>
       <div id="Card9-card-item1">Misi</div>
@@ -353,24 +323,21 @@ $(document).ready(function()
 <div class="row">
 <div class="col-1">
 <div class="col-1-padding">
-<div id="wb_Image1" style="display:inline-block;width:100%;height:auto;z-index:7;">
+<div id="wb_Image1" style="display:inline-block;width:100%;height:auto;z-index:8;">
 <img src="images/f-robot2.jpg" id="Image1" alt="" title="600x400">
 </div>
 </div>
 </div>
 <div class="col-2">
 <div class="col-2-padding">
-<div id="wb_Heading1" style="display:inline-block;width:100%;z-index:8;">
+<div id="wb_Heading1" style="display:inline-block;width:100%;z-index:9;">
 <h1 id="Heading1">Elektronika</h1>
 </div>
-<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:9;">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:10;">
 <h2 id="Heading2">Riset dan Karya</h2>
 </div>
 <div id="wb_Text1">
-<span style="color:#969696;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</span>
-</div>
-<div id="wb_Shape1" style="display:inline-block;width:102px;height:44px;z-index:11;position:relative;">
-<img src="images/img0001.png" id="Shape1" alt="" style="width:102px;height:44px;">
+<span style="color:#000000;">Kegiatan yang kita lakukan adalah membuat sebuah konsep dan prototype alat yang diharapkan dapat berguna bagi masyarakat. Karya Ilmiah yang kami buat adalah Smart Home berbasis Wifi, Tempat Sampah Otomatis, Kran Air Tanpa Sentuh dan project-project kecil lainnya. Dengan demikian kami akan selalu mencari tahu tentang perkembangan teknologi dan ilmu pengetahuan serta menerapkannya.</span>
 </div>
 </div>
 </div>
@@ -389,16 +356,13 @@ $(document).ready(function()
 <h2 id="Heading4">Otomasi dan Kendali</h2>
 </div>
 <div id="wb_Text2">
-<span style="color:#969696;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</span>
-</div>
-<div id="wb_Shape2" style="display:inline-block;width:102px;height:44px;z-index:15;position:relative;">
-<img src="images/img0002.png" id="Shape2" alt="" style="width:102px;height:44px;">
+<span style="color:#000000;">Selain Elektrikal, Kita mengajarkan kepada adik-adik Murid SD, SMP dan SMA yang berdomisili di Sidoarjo, Robot yang diajarkan antara lain yaitu Line Follower, Transporter dan Robot Soccer. dimana diharapkan adik-adik siswa dapat mengenal teknologi yang sedang berkembang pesat pada masa ini.</span>
 </div>
 </div>
 </div>
 <div class="col-2">
 <div class="col-2-padding">
-<div id="wb_Image2" style="display:inline-block;width:100%;height:auto;z-index:16;">
+<div id="wb_Image2" style="display:inline-block;width:100%;height:auto;z-index:15;">
 <img src="images/utm-gelar-kontes-teknologi-robotik-ini-tujuannya_m_158990.jpg" id="Image2" alt="" title="600x400">
 </div>
 </div>
@@ -452,107 +416,21 @@ $(document).ready(function()
 </div>
 <div class="col-2">
 <div id="wb_Text4">
-<span style="color:#000000;font-family:Arial;font-size:27px;line-height:30px;"><strong>Kegiatan Kami?</strong></span><span style="color:#000000;font-family:Arial;font-size:13px;line-height:15px;"><br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae animi soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam laboriosam. Repellat explicabo, maiores!<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis optio neque consectetur consequatur magni in nisi, natus beatae quidem quam odit commodi ducimus totam eum, alias, adipisci nesciunt voluptate. Voluptatum.</span>
-</div>
-<input type="submit" id="Button1" name="" value="More Info" style="display:inline-block;width:156px;height:37px;z-index:22;">
+<span style="color:#000000;font-family:Arial;font-size:27px;line-height:30px;"><strong>Kegiatan Kami?</strong></span><span style="color:#000000;font-family:Arial;font-size:13px;line-height:15px;"><br><br>Berikut adalah dokumentasi kegiatan - kegiatan kami Dimulai dari Pengajaran Teknologi Smart-Home juga pembuatan Robot Soccer dan Line Follower<br><br>Banyak kegiatan kami yang belum terdokumentasikan diantaranya kolaborasi dengan elektro mengajar bangkalan dan UKM-FT Soket di universitas Trunojoyo Madura</span>
 </div>
 </div>
 </div>
 </div>
-<div id="wb_footer">
-<div id="footer">
+</div>
+<div id="wb_LayoutGrid6">
+<div id="LayoutGrid6">
 <div class="row">
 <div class="col-1">
-<div id="wb_Text7">
-<span style="color:#FFFFFF;font-family:'Arial Rounded MT Bold';font-size:20px;">Partner Kami</span>
+<div id="wb_Image9" style="display:inline-block;width:100%;height:auto;z-index:24;">
+<img src="images/author_img.png" id="Image9" alt="">
 </div>
-</div>
-</div>
-</div>
-</div>
-<div id="wb_social">
-<div id="social">
-<div class="row">
-<div class="col-1">
-<div id="wb_Image3" style="display:inline-block;width:92px;height:76px;z-index:27;">
-<img src="images/logosoket-removebg-preview.png" id="Image3" alt="">
-</div>
-</div>
-<div class="col-2">
-<div id="wb_Image4" style="display:inline-block;width:94px;height:89px;z-index:28;">
-<img src="images/Elektro-Universitas-Trunojoyo-Madura-removebg-preview.png" id="Image4" alt="">
-</div>
-</div>
-<div class="col-3">
-<div id="wb_Image5" style="display:inline-block;width:170px;height:84px;z-index:29;">
-<img src="images/Untitled-2.png" id="Image5" alt="">
-</div>
-</div>
-<div class="col-4">
-</div>
-</div>
-</div>
-</div>
-<div id="wb_links">
-<div id="links-divider-top">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 25" preserveAspectRatio="none">
-<path class="divider-fill" d="m 0,0 v 3.8265306 c 0,0 393.8,0 483.4,0 9.2,0 16.6,9.4387754 16.6,21.1734694 0,-11.607143 7.4,-21.1734694 16.6,-21.1734694 89.6,0 483.4,0 483.4,0 V 0 Z" />
-</svg>
-</div>
-<div id="links">
-<div class="row">
-<div class="col-1">
-<div id="wb_linksText1">
-<span style="color:#696969;"><strong>NAVIGATE</strong></span>
-</div>
-<div id="wb_linksMenu1" style="display:inline-block;width:100%;z-index:31;">
-<ul id="linksMenu1" role="menubar" class="nav">
-<li class="nav-item firstmain"><a role="menuitem" class="nav-link" href="" target="_self">Home</a>
-</li>
-<li class="nav-item"><a role="menuitem" class="nav-link" href="" target="_self">About</a>
-</li>
-<li class="nav-item"><a role="menuitem" class="nav-link" href="" target="_self">Services</a>
-</li>
-<li class="nav-item"><a role="menuitem" class="nav-link" href="" target="_self">Products</a>
-</li>
-</ul>
-
-</div>
-</div>
-<div class="col-2">
-<div id="wb_linksText2">
-<span style="color:#696969;"><strong>Hubungi Kami di </strong></span>
-</div>
-<div id="wb_linksMenu2" style="display:inline-block;width:100%;z-index:33;">
-<ul id="linksMenu2" role="menubar" class="nav">
-<li class="nav-item firstmain"><a role="menuitem" class="nav-link" href="" target="_self">Facebook</a>
-</li>
-<li class="nav-item"><a role="menuitem" class="nav-link" href="" target="_self">Instagram</a>
-</li>
-<li class="nav-item"><a role="menuitem" class="nav-link" href="" target="_self">Whatsapp</a>
-</li>
-<li class="nav-item"><a role="menuitem" class="nav-link" href="" target="_self">Telegram</a>
-</li>
-</ul>
-
-</div>
-</div>
-<div class="col-3">
-<div id="wb_linksText3">
-<span style="color:#696969;"><strong>Alamat</strong></span>
-</div>
-<div id="wb_linksMenu3" style="display:inline-block;width:100%;z-index:35;">
-<ul id="linksMenu3" role="menubar" class="nav">
-<li class="nav-item firstmain"><a role="menuitem" class="nav-link" href="" target="_self">Jl.&nbsp;Telang&nbsp;Asri</a>
-</li>
-<li class="nav-item"><a role="menuitem" class="nav-link" href="" target="_self">Desa&nbsp;Telang</a>
-</li>
-<li class="nav-item"><a role="menuitem" class="nav-link" href="" target="_self">Kecamata&nbsp;Kamal</a>
-</li>
-<li class="nav-item"><a role="menuitem" class="nav-link" href="" target="_self">Bangkalan</a>
-</li>
-</ul>
-
+<div id="wb_Text20">
+<span style="color:#FFFFFF;font-family:Arial;font-size:24px;"><br></span><span style="color:#FFFFFF;font-family:Arial;font-size:21px;">&quot;Mari Belajar Bersama&quot;</span>
 </div>
 </div>
 </div>
@@ -562,8 +440,110 @@ $(document).ready(function()
 <div id="LayoutGrid5">
 <div class="row">
 <div class="col-1">
-<div id="wb_footerText">
-<span style="color:#000000;">Copyright © 2019 Elektro Mengajar.&nbsp; All Rights Reserved</span>
+<div id="wb_Text7">
+<span style="color:#000000;font-family:'Trebuchet MS';font-size:24px;"><strong>OUR PARTNERSHIP</strong></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid7">
+<div id="LayoutGrid7">
+<div class="row">
+<div class="col-1">
+<div id="wb_Image3" style="display:inline-block;width:127px;height:109px;z-index:27;">
+<img src="images/logo-universitas-trunojoyo-madura.png" id="Image3" alt="">
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Image4" style="display:inline-block;width:127px;height:100px;z-index:28;">
+<img src="images/logosoket-removebg-preview.png" id="Image4" alt="">
+</div>
+</div>
+<div class="col-3">
+<div id="wb_Image5" style="display:inline-block;width:119px;height:115px;z-index:29;">
+<img src="images/Elektro-Universitas-Trunojoyo-Madura-removebg-preview.png" id="Image5" alt="">
+</div>
+</div>
+<div class="col-4">
+<div id="wb_Image7" style="display:inline-block;width:127px;height:102px;z-index:30;">
+<img src="images/OMEGABOT original.png" id="Image7" alt="">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid8">
+<div id="LayoutGrid8">
+<div class="row">
+<div class="col-1">
+<div id="wb_Text8">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>UNIVERSITAS TRUNOJOYO MADURA</strong></span>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Text9">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>UKM-FT SOKET</strong></span>
+</div>
+</div>
+<div class="col-3">
+<div id="wb_Text10">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>PRODI TEKNIK ELEKTRO</strong></span>
+</div>
+</div>
+<div class="col-4">
+<div id="wb_Text12">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>OHMEGABOT</strong></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid9">
+<div id="LayoutGrid9">
+<div class="row">
+<div class="col-1">
+<div id="wb_Text13">
+<span style="color:#FFFFFF;font-family:Arial;font-size:19px;"><strong>INFO</strong></span>
+</div>
+<div id="wb_Text14">
+<span style="color:#FFFFFF;font-family:Arial;font-size:16px;"><strong>Jl. Telang Asri<br>Kec. Kamal Kab. Bangkalan<br>elektromengajar@gmail.com<br>Phone: +62 856-5567-9646</strong></span>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Text15">
+<span style="color:#FFFFFF;font-family:Arial;font-size:19px;"><strong>SOCIAL MEDIA</strong></span>
+</div>
+<div id="wb_FontAwesomeIcon1" style="display:inline-block;width:16px;height:16px;text-align:center;z-index:38;">
+<a href="facebook.com/ElektroMengajar"><div id="FontAwesomeIcon1"><i class="fa fa-facebook"></i></div></a>
+</div>
+<div id="wb_FontAwesomeIcon2" style="display:inline-block;width:16px;height:16px;text-align:center;z-index:39;">
+<a href="twitter.com/elektromengajar"><div id="FontAwesomeIcon2"><i class="fa fa-twitter"></i></div></a>
+</div>
+<div id="wb_FontAwesomeIcon4" style="display:inline-block;width:16px;height:16px;text-align:center;z-index:40;">
+<a href="instagram.com/elektromengajar"><div id="FontAwesomeIcon4"><i class="fa fa-instagram"></i></div></a>
+</div>
+<div id="wb_FontAwesomeIcon5" style="display:inline-block;width:16px;height:16px;text-align:center;z-index:41;">
+<a href="youtube.com/elektromengajar"><div id="FontAwesomeIcon5"><i class="fa fa-youtube"></i></div></a>
+</div>
+</div>
+<div class="col-3">
+<div id="wb_Text16">
+<span style="color:#FFFFFF;font-family:Arial;font-size:19px;"><strong>ABOUT</strong></span>
+</div>
+<div id="wb_Text17">
+<span style="color:#FFFFFF;font-family:Arial;font-size:16px;"><strong>Elektro Mengajar Branch Sidoarjo</strong></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid10">
+<div id="LayoutGrid10">
+<div class="row">
+<div class="col-1">
+<div id="wb_Text18">
+<span style="color:#FFFFFF;font-family:Arial;font-size:13px;">Copyright © Elektro Mengajar Sidoarjo 2021. All right reserved. </span>
 </div>
 </div>
 </div>

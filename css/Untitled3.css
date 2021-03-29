@@ -66,36 +66,6 @@
    0% { opacity: 1;  }
    100% { opacity: 0;  }
 }
-@-webkit-keyframes jello-horizontal
-{
-   0% { -webkit-transform: rotateX(0deg) ;  }
-   30% { -webkit-transform: rotateX(0deg) scale3d(1.25,0.75,1.0) ;  }
-   40% { -webkit-transform: rotateX(0deg) scale3d(0.75,1.25,1.0) ;  }
-   50% { -webkit-transform: rotateX(0deg) scale3d(1.15,0.85,1.0) ;  }
-   65% { -webkit-transform: rotateX(0deg) scale3d(0.95,1.05,1.0) ;  }
-   75% { -webkit-transform: rotateX(0deg) scale3d(1.05,0.95,1.0) ;  }
-   100% { -webkit-transform: rotateX(0deg) scale3d(1.0,1.0,1.0) ;  }
-}
-@-moz-keyframes jello-horizontal
-{
-   0% { -moz-transform: rotateX(0deg) ;  }
-   30% { -moz-transform: rotateX(0deg) scale3d(1.25,0.75,1.0) ;  }
-   40% { -moz-transform: rotateX(0deg) scale3d(0.75,1.25,1.0) ;  }
-   50% { -moz-transform: rotateX(0deg) scale3d(1.15,0.85,1.0) ;  }
-   65% { -moz-transform: rotateX(0deg) scale3d(0.95,1.05,1.0) ;  }
-   75% { -moz-transform: rotateX(0deg) scale3d(1.05,0.95,1.0) ;  }
-   100% { -moz-transform: rotateX(0deg) scale3d(1.0,1.0,1.0) ;  }
-}
-@keyframes jello-horizontal
-{
-   0% { transform: rotateX(0deg) ;  }
-   30% { transform: rotateX(0deg) scale3d(1.25,0.75,1.0) ;  }
-   40% { transform: rotateX(0deg) scale3d(0.75,1.25,1.0) ;  }
-   50% { transform: rotateX(0deg) scale3d(1.15,0.85,1.0) ;  }
-   65% { transform: rotateX(0deg) scale3d(0.95,1.05,1.0) ;  }
-   75% { transform: rotateX(0deg) scale3d(1.05,0.95,1.0) ;  }
-   100% { transform: rotateX(0deg) scale3d(1.0,1.0,1.0) ;  }
-}
 @-webkit-keyframes slide-down-in
 {
    0% { -webkit-transform: translate(0px,-100%) rotate(1deg) ; opacity: 0; -webkit-transform-origin: 0 0;  }
@@ -110,24 +80,6 @@
 {
    0% { transform: translate(0px,-100%) rotate(1deg) ; opacity: 0; transform-origin: 0 0;  }
    100% { opacity: 1; transform: translate(0px,0px) rotate(0deg) ; transform-origin: 0 0;  }
-}
-@-webkit-keyframes text-letterspacing-contract
-{
-   0% { letter-spacing: 1em; opacity: 0;  }
-   50% { opacity: 0.6;  }
-   100% { letter-spacing: normalpx; opacity: 1.0;  }
-}
-@-moz-keyframes text-letterspacing-contract
-{
-   0% { letter-spacing: 1em; opacity: 0;  }
-   50% { opacity: 0.6;  }
-   100% { letter-spacing: normalpx; opacity: 1.0;  }
-}
-@keyframes text-letterspacing-contract
-{
-   0% { letter-spacing: 1em; opacity: 0;  }
-   50% { opacity: 0.6;  }
-   100% { letter-spacing: normalpx; opacity: 1.0;  }
 }
 h1, .h1
 {
